@@ -16,7 +16,6 @@
     --gold: #e8b64c;
     --gold-soft: #f2cd7c;
     --film: #faf3e6;
-    --ink: #1a1210;
     --bulb: #fff2c8;
     --ok: #7bc98e;
     --shadow: 0 20px 60px rgba(0,0,0,.55);
@@ -52,51 +51,23 @@
   .bulb:nth-child(3n){ animation-delay:.8s; }
   @keyframes twinkle{ 0%,100%{opacity:1;} 50%{opacity:.25;} }
 
-  h1{
-    font-family:'Bebas Neue', sans-serif; font-size:clamp(34px, 5.5vw, 56px);
-    letter-spacing:4px; margin:0; text-align:center; color:var(--gold-soft);
-    text-shadow: 0 0 24px rgba(232,182,76,.35);
-  }
+  h1{ font-family:'Bebas Neue', sans-serif; font-size:clamp(34px, 5.5vw, 56px); letter-spacing:4px; margin:0; text-align:center; color:var(--gold-soft); text-shadow: 0 0 24px rgba(232,182,76,.35); }
   .sub{ text-align:center; color:#d8c3b0; font-size:13px; letter-spacing:2px; text-transform:uppercase; margin:4px 0 22px; }
 
-  .wrap{ width:100%; max-width:1040px; }
+  .wrap{ width:100%; max-width:1100px; }
 
   /* ---- Landing / gate screen ---- */
-  .gate{
-    max-width:460px; margin:0 auto;
-    background: linear-gradient(180deg, #3a161d, #261014);
-    border:1px solid rgba(232,182,76,.25);
-    border-radius:14px; padding:28px 24px;
-    box-shadow: var(--shadow);
-    text-align:center;
-  }
+  .gate{ max-width:460px; margin:0 auto; background: linear-gradient(180deg, #3a161d, #261014); border:1px solid rgba(232,182,76,.25); border-radius:14px; padding:28px 24px; box-shadow: var(--shadow); text-align:center; }
   .gate p.lead{ color:#e6d5c4; font-size:14px; line-height:1.6; margin:0 0 22px; }
   .gate-tabs{ display:flex; gap:8px; margin-bottom:20px; justify-content:center; }
-  .gate-tab{
-    font-family:'DM Sans',sans-serif; font-weight:700; font-size:13px; letter-spacing:.5px;
-    background:transparent; color:var(--gold-soft); border:1px solid rgba(232,182,76,.4);
-    padding:9px 18px; border-radius:999px; cursor:pointer; transition:.15s;
-  }
+  .gate-tab{ font-family:'DM Sans',sans-serif; font-weight:700; font-size:13px; letter-spacing:.5px; background:transparent; color:var(--gold-soft); border:1px solid rgba(232,182,76,.4); padding:9px 18px; border-radius:999px; cursor:pointer; transition:.15s; }
   .gate-tab.active{ background:var(--gold); color:#241009; border-color:var(--gold); }
   .gate-panel{ display:none; }
   .gate-panel.active{ display:block; }
-  .code-display{
-    font-family:'Bebas Neue', sans-serif; font-size:52px; letter-spacing:10px;
-    color:var(--gold-soft); background:#160b0c; border:1px solid rgba(232,182,76,.35);
-    border-radius:10px; padding:16px 10px; margin:14px 0; user-select:all;
-  }
-  .code-input{
-    width:100%; text-align:center; font-family:'Bebas Neue', sans-serif; font-size:34px; letter-spacing:10px;
-    background:#160b0c; border:1px solid rgba(232,182,76,.35); color:var(--film);
-    padding:14px 10px; border-radius:10px; margin-bottom:14px;
-  }
+  .code-display{ font-family:'Bebas Neue', sans-serif; font-size:52px; letter-spacing:10px; color:var(--gold-soft); background:#160b0c; border:1px solid rgba(232,182,76,.35); border-radius:10px; padding:16px 10px; margin:14px 0; user-select:all; }
+  .code-input{ width:100%; text-align:center; font-family:'Bebas Neue', sans-serif; font-size:34px; letter-spacing:10px; background:#160b0c; border:1px solid rgba(232,182,76,.35); color:var(--film); padding:14px 10px; border-radius:10px; margin-bottom:14px; }
   .code-input:focus{ outline:none; border-color:var(--gold); }
-  .primary-btn{
-    font-family:'DM Sans', sans-serif; font-weight:700; background: var(--gold); color:#241009;
-    border:none; padding:12px 22px; border-radius:999px; cursor:pointer; font-size:14px;
-    letter-spacing:.5px; transition: transform .15s ease, box-shadow .15s ease;
-    box-shadow: 0 6px 18px rgba(232,182,76,.35); width:100%;
-  }
+  .primary-btn{ font-family:'DM Sans', sans-serif; font-weight:700; background: var(--gold); color:#241009; border:none; padding:12px 22px; border-radius:999px; cursor:pointer; font-size:14px; letter-spacing:.5px; transition: transform .15s ease, box-shadow .15s ease; box-shadow: 0 6px 18px rgba(232,182,76,.35); width:100%; }
   .primary-btn:hover{ transform: translateY(-2px); box-shadow:0 10px 24px rgba(232,182,76,.45); }
   .primary-btn:disabled{ opacity:.4; cursor:not-allowed; transform:none; box-shadow:none; }
   .gate-error{ color:#ff9a9a; font-size:13px; margin-top:10px; min-height:16px; }
@@ -104,30 +75,21 @@
 
   /* ---- Booth screen ---- */
   #boothScreen{ display:none; }
-  .stage{ width:100%; max-width:1040px; display:grid; grid-template-columns: 1.35fr .9fr; gap:28px; align-items:start; margin:0 auto; }
-  @media (max-width: 860px){ .stage{ grid-template-columns: 1fr; } }
+  .stage{ width:100%; max-width:1100px; display:grid; grid-template-columns: 1.25fr 1fr; gap:28px; align-items:start; margin:0 auto; }
+  @media (max-width: 900px){ .stage{ grid-template-columns: 1fr; } }
 
-  .session-bar{
-    display:flex; align-items:center; justify-content:space-between; gap:10px;
-    max-width:1040px; margin:0 auto 16px; padding:10px 16px;
-    background:rgba(0,0,0,.25); border:1px solid rgba(232,182,76,.2); border-radius:999px;
-    font-size:13px; flex-wrap:wrap;
-  }
+  .session-bar{ display:flex; align-items:center; justify-content:space-between; gap:10px; max-width:1100px; margin:0 auto 16px; padding:10px 16px; background:rgba(0,0,0,.25); border:1px solid rgba(232,182,76,.2); border-radius:999px; font-size:13px; flex-wrap:wrap; }
   .session-bar .code-chip{ font-family:'Bebas Neue',sans-serif; letter-spacing:3px; color:var(--gold-soft); }
   .presence{ display:flex; align-items:center; gap:6px; color:#cbb8a6; }
   .presence .led{ width:8px; height:8px; border-radius:50%; background:#7a5f4a; }
   .presence.online .led{ background:var(--ok); box-shadow:0 0 6px var(--ok); }
   .leave-link{ color:#d8b98a; font-size:12px; cursor:pointer; text-decoration:underline; background:none; border:none; }
 
-  .booth{
-    background: linear-gradient(180deg, #3a161d, #261014);
-    border:1px solid rgba(232,182,76,.25); border-radius:14px; padding:20px; box-shadow: var(--shadow);
-    position:relative;
-  }
+  .booth{ background: linear-gradient(180deg, #3a161d, #261014); border:1px solid rgba(232,182,76,.25); border-radius:14px; padding:20px; box-shadow: var(--shadow); position:relative; }
   .booth::before{ content:""; position:absolute; inset:10px; border:2px solid rgba(232,182,76,.18); border-radius:8px; pointer-events:none; }
 
   .viewfinder{ position:relative; aspect-ratio: 4/3; background:#0c0607; border-radius:8px; overflow:hidden; border: 3px solid var(--gold); box-shadow: 0 0 0 6px rgba(0,0,0,.35), inset 0 0 40px rgba(0,0,0,.6); }
-  video, .flash-canvas{ width:100%; height:100%; object-fit:cover; display:block; }
+  video{ width:100%; height:100%; object-fit:cover; display:block; }
   video.filter-bw{ filter: grayscale(1) contrast(1.15); }
   video.filter-sepia{ filter: sepia(.75) saturate(1.3) contrast(1.05); }
   video.filter-vintage{ filter: saturate(.7) contrast(1.1) brightness(1.05) hue-rotate(-6deg); }
@@ -158,22 +120,28 @@
   .dots{ display:flex; gap:6px; }
   .dot{ width:9px; height:9px; border-radius:50%; border:1px solid var(--gold); }
   .dot.filled{ background:var(--gold); }
-  .dot.mine{ box-shadow:0 0 0 2px rgba(255,255,255,.4) inset; }
 
   .caption-field{ margin-top:16px; }
   .caption-field label{ display:block; font-size:12px; text-transform:uppercase; letter-spacing:1px; color:#cbb8a6; margin-bottom:6px; }
   .caption-field input{ width:100%; background:#160b0c; border:1px solid rgba(232,182,76,.35); color:var(--film); padding:10px 12px; border-radius:8px; font-family:'Caveat', cursive; font-size:20px; }
   .caption-field input:focus{ outline:none; border-color:var(--gold); }
 
-  .strip-wrap{ display:flex; flex-direction:column; align-items:center; gap:14px; }
-  .strip{ background: var(--film); padding:14px 14px 20px; border-radius:2px; box-shadow: var(--shadow); width:100%; max-width:260px; display:flex; flex-direction:column; gap:10px; position:relative; transform: rotate(1.2deg); }
-  .strip::before, .strip::after{ content:""; position:absolute; left:8px; right:8px; height:10px; background: repeating-linear-gradient(90deg, transparent 0 8px, rgba(0,0,0,.12) 8px 10px); }
+  /* ---- Dual strips ---- */
+  .strips-wrap{ display:flex; flex-direction:column; align-items:center; gap:16px; }
+  .strips-row{ display:flex; gap:18px; justify-content:center; flex-wrap:wrap; }
+  .strip-col{ display:flex; flex-direction:column; align-items:center; gap:6px; }
+  .strip-label{ font-family:'Bebas Neue', sans-serif; letter-spacing:2px; font-size:15px; color:var(--gold-soft); }
+  .strip-label .you-flag{ font-family:'DM Sans',sans-serif; font-size:10px; letter-spacing:1px; background:var(--gold); color:#241009; border-radius:999px; padding:1px 8px; margin-left:6px; vertical-align:middle; }
+  .strip{ background: var(--film); padding:12px 12px 16px; border-radius:2px; box-shadow: var(--shadow); width:150px; display:flex; flex-direction:column; gap:8px; position:relative; }
+  .strip.role-host{ transform: rotate(-1.4deg); }
+  .strip.role-guest{ transform: rotate(1.4deg); }
+  .strip::before, .strip::after{ content:""; position:absolute; left:6px; right:6px; height:8px; background: repeating-linear-gradient(90deg, transparent 0 6px, rgba(0,0,0,.12) 6px 8px); }
   .strip::before{ top:2px; } .strip::after{ bottom:2px; }
   .frame{ aspect-ratio: 4/3; background:#e9e0d0; border:1px solid rgba(0,0,0,.08); display:flex; align-items:center; justify-content:center; overflow:hidden; position:relative; }
   .frame img{ width:100%; height:100%; object-fit:cover; display:block; }
-  .frame .tag{ position:absolute; bottom:4px; right:6px; font-family:'Bebas Neue', sans-serif; font-size:11px; color:#8a7a63; letter-spacing:1px; background:rgba(250,243,230,.75); padding:1px 5px; border-radius:3px; }
-  .frame.empty{ color:#b3a690; font-family:'Bebas Neue', sans-serif; letter-spacing:2px; font-size:13px; }
-  .strip-caption{ text-align:center; font-family:'Caveat', cursive; font-size:22px; color:#3a2a1e; margin-top:2px; }
+  .frame.empty{ color:#b3a690; font-family:'Bebas Neue', sans-serif; letter-spacing:2px; font-size:12px; }
+
+  .shared-caption{ text-align:center; font-family:'Caveat', cursive; font-size:22px; color:var(--gold-soft); margin-top:4px; }
 
   .actions{ display:flex; gap:10px; flex-wrap:wrap; justify-content:center; }
   .ghost-btn{ font-family:'DM Sans', sans-serif; font-weight:700; font-size:13px; background:transparent; color:var(--gold-soft); border:1px solid rgba(232,182,76,.5); padding:10px 18px; border-radius:999px; cursor:pointer; transition: all .15s ease; }
@@ -195,11 +163,11 @@
       <span class="bulb"></span><span class="bulb"></span><span class="bulb"></span><span class="bulb"></span>
     </div>
     <h1>Surprise Photo Booth</h1>
-    <div class="sub">Two devices &middot; one shared strip &middot; live</div>
+    <div class="sub">Two devices &middot; two strips &middot; live</div>
 
     <!-- GATE SCREEN -->
     <div id="gateScreen" class="gate">
-      <p class="lead">Start a session on this device, then share the code so the other person can join from theirs. Every shot lands on one strip, in real time.</p>
+      <p class="lead">Start a session on this device, then share the code so the other person can join from theirs. Each of you fills your own strip, live, side by side.</p>
       <div class="gate-tabs">
         <button class="gate-tab active" data-tab="create">Start Session</button>
         <button class="gate-tab" data-tab="join">Join Session</button>
@@ -236,7 +204,7 @@
             <div class="countdown" id="countdown"></div>
             <div class="placeholder" id="placeholder">
               <div class="icon">📸</div>
-              <div>Turn on your camera to join the shot</div>
+              <div>Turn on your camera to fill your strip</div>
               <button id="startCameraBtn">Open My Camera</button>
             </div>
           </div>
@@ -259,22 +227,36 @@
           </div>
 
           <div class="caption-field">
-            <label for="captionInput">Message for the strip (shared)</label>
+            <label for="captionInput">Message for the strips (shared)</label>
             <input id="captionInput" type="text" maxlength="40" placeholder="Happy Birthday, You're the Best!">
           </div>
         </div>
 
-        <div class="strip-wrap">
-          <div class="strip" id="strip">
-            <div class="frame empty" data-slot="0">1</div>
-            <div class="frame empty" data-slot="1">2</div>
-            <div class="frame empty" data-slot="2">3</div>
-            <div class="frame empty" data-slot="3">4</div>
-            <div class="strip-caption" id="stripCaption">&nbsp;</div>
+        <div class="strips-wrap">
+          <div class="strips-row">
+            <div class="strip-col">
+              <div class="strip-label" id="hostLabel">Player 1</div>
+              <div class="strip role-host" id="hostStrip">
+                <div class="frame empty" data-slot="0">1</div>
+                <div class="frame empty" data-slot="1">2</div>
+                <div class="frame empty" data-slot="2">3</div>
+                <div class="frame empty" data-slot="3">4</div>
+              </div>
+            </div>
+            <div class="strip-col">
+              <div class="strip-label" id="guestLabel">Player 2</div>
+              <div class="strip role-guest" id="guestStrip">
+                <div class="frame empty" data-slot="0">1</div>
+                <div class="frame empty" data-slot="1">2</div>
+                <div class="frame empty" data-slot="2">3</div>
+                <div class="frame empty" data-slot="3">4</div>
+              </div>
+            </div>
           </div>
+          <div class="shared-caption" id="sharedCaption">&nbsp;</div>
           <div class="actions">
-            <button class="ghost-btn" id="resetBtn">Reset Strip</button>
-            <button class="primary-btn" id="downloadBtn" disabled style="width:auto;">Download Strip</button>
+            <button class="ghost-btn" id="resetBtn">Reset My Strip</button>
+            <button class="primary-btn" id="downloadBtn" disabled style="width:auto;">Download Both Strips</button>
           </div>
         </div>
       </div>
@@ -302,6 +284,7 @@
   const db = firebase.database();
 
   const myId = 'p_' + Math.random().toString(36).slice(2, 9);
+  let myRole = null; // 'host' or 'guest'
 
   // ---------- Elements ----------
   const gateScreen = document.getElementById('gateScreen');
@@ -330,19 +313,22 @@
   const countdownEl = document.getElementById('countdown');
   const flashOverlay = document.getElementById('flashOverlay');
   const dots = document.querySelectorAll('#dots .dot');
-  const frames = document.querySelectorAll('#strip .frame');
   const captionInput = document.getElementById('captionInput');
-  const stripCaption = document.getElementById('stripCaption');
+  const sharedCaption = document.getElementById('sharedCaption');
   const captureCanvas = document.getElementById('captureCanvas');
   const finalCanvas = document.getElementById('finalCanvas');
   const filterButtons = document.querySelectorAll('.filter-chip');
+  const hostLabel = document.getElementById('hostLabel');
+  const guestLabel = document.getElementById('guestLabel');
+  const hostFrames = document.querySelectorAll('#hostStrip .frame');
+  const guestFrames = document.querySelectorAll('#guestStrip .frame');
 
   let roomCode = null;
   let stream = null;
   let currentFilter = 'normal';
   let busy = false;
   let captionEditing = false;
-  let slotsCache = {};
+  let playersCache = { host: {}, guest: {} };
 
   window.addEventListener('load', () => {
     setTimeout(() => document.body.classList.add('open'), 300);
@@ -363,11 +349,20 @@
     return String(Math.floor(1000 + Math.random() * 9000));
   }
 
-  function showBoothScreen(code){
+  function emptySlots(){
+    return { slot0: null, slot1: null, slot2: null, slot3: null };
+  }
+
+  function showBoothScreen(code, role){
     roomCode = code;
+    myRole = role;
     activeCodeLabel.textContent = code;
     gateScreen.style.display = 'none';
     boothScreen.style.display = 'block';
+
+    hostLabel.innerHTML = 'Player 1' + (myRole === 'host' ? ' <span class="you-flag">You</span>' : '');
+    guestLabel.innerHTML = 'Player 2' + (myRole === 'guest' ? ' <span class="you-flag">You</span>' : '');
+
     attachRoomListeners();
     setupPresence();
   }
@@ -393,13 +388,16 @@
       await db.ref('rooms/' + code).set({
         createdAt: Date.now(),
         caption: '',
-        slots: { slot0: null, slot1: null, slot2: null, slot3: null }
+        players: {
+          host: { slots: emptySlots() },
+          guest: { slots: emptySlots() }
+        }
       });
 
       codeDisplay.textContent = code;
       codeDisplay.classList.remove('hidden');
       enterBoothFromCreate.classList.remove('hidden');
-      enterBoothFromCreate.onclick = () => showBoothScreen(code);
+      enterBoothFromCreate.onclick = () => showBoothScreen(code, 'host');
     }catch(err){
       gateError.textContent = 'Could not create a room. Check your connection and try again.';
     }
@@ -421,7 +419,7 @@
         joinBtn.disabled = false;
         return;
       }
-      showBoothScreen(code);
+      showBoothScreen(code, 'guest');
     }catch(err){
       gateError.textContent = 'Could not join. Check your connection and try again.';
       joinBtn.disabled = false;
@@ -453,41 +451,50 @@
 
   // ---------- Room data listeners ----------
   function attachRoomListeners(){
-    db.ref(`rooms/${roomCode}/slots`).on('value', snap => {
-      slotsCache = snap.val() || {};
-      renderSlots();
+    db.ref(`rooms/${roomCode}/players`).on('value', snap => {
+      playersCache = snap.val() || { host: {}, guest: {} };
+      renderStrips();
     });
 
     db.ref(`rooms/${roomCode}/caption`).on('value', snap => {
       const val = snap.val() || '';
-      stripCaption.textContent = val || '\u00A0';
+      sharedCaption.textContent = val || '\u00A0';
       if(!captionEditing){
         captionInput.value = val;
       }
     });
   }
 
-  function renderSlots(){
-    let filledCount = 0;
+  function fillFrames(frameEls, slots){
+    let count = 0;
     for(let i=0; i<4; i++){
       const key = 'slot' + i;
-      const data = slotsCache[key];
-      const frame = frames[i];
+      const data = slots ? slots[key] : null;
+      const frame = frameEls[i];
       if(data && data.img){
-        filledCount++;
+        count++;
         frame.classList.remove('empty');
-        const mineTag = data.owner === myId ? 'You' : 'Them';
-        frame.innerHTML = '<img src="' + data.img + '"><span class="tag">' + mineTag + '</span>';
-        dots[i].classList.add('filled');
+        frame.innerHTML = '<img src="' + data.img + '">';
       } else {
         frame.className = 'frame empty';
         frame.textContent = (i+1);
-        dots[i].classList.remove('filled');
       }
     }
-    downloadBtn.disabled = filledCount < 4;
-    if(filledCount >= 4){
-      statusText.textContent = 'Strip complete! Download it below.';
+    return count;
+  }
+
+  function renderStrips(){
+    const hostSlots = (playersCache.host || {}).slots;
+    const guestSlots = (playersCache.guest || {}).slots;
+    const hostCount = fillFrames(hostFrames, hostSlots);
+    const guestCount = fillFrames(guestFrames, guestSlots);
+
+    const myCount = myRole === 'host' ? hostCount : guestCount;
+    dots.forEach((d, i) => d.classList.toggle('filled', i < myCount));
+
+    downloadBtn.disabled = !(hostCount >= 4 && guestCount >= 4);
+    if(hostCount >= 4 && guestCount >= 4){
+      statusText.textContent = 'Both strips complete! Download below.';
     }
   }
 
@@ -565,7 +572,7 @@
   }
 
   captureBtn.addEventListener('click', async () => {
-    if(busy || !stream || !roomCode) return;
+    if(busy || !stream || !roomCode || !myRole) return;
     busy = true;
     captureBtn.disabled = true;
     statusText.textContent = 'Get ready…';
@@ -574,26 +581,22 @@
     await wait(120);
     const dataUrl = snap();
 
-    const slotsRef = db.ref(`rooms/${roomCode}/slots`);
+    const slotsRef = db.ref(`rooms/${roomCode}/players/${myRole}/slots`);
     let placed = false;
     try{
-      const result = await slotsRef.transaction(current => {
+      await slotsRef.transaction(current => {
         current = current || {};
         for(let i=0; i<4; i++){
           const key = 'slot' + i;
           if(!current[key]){
-            current[key] = { img: dataUrl, owner: myId, ts: Date.now() };
+            current[key] = { img: dataUrl, ts: Date.now() };
             placed = true;
             return current;
           }
         }
         return current;
       });
-      if(placed){
-        statusText.textContent = 'Shot added to the strip!';
-      } else {
-        statusText.textContent = 'Strip is already full — reset to retake.';
-      }
+      statusText.textContent = placed ? 'Shot added to your strip!' : 'Your strip is already full — reset to retake.';
     }catch(err){
       statusText.textContent = 'Could not sync that shot, try again.';
     }
@@ -603,50 +606,60 @@
   });
 
   resetBtn.addEventListener('click', async () => {
-    if(!roomCode) return;
-    await db.ref(`rooms/${roomCode}/slots`).set({ slot0: null, slot1: null, slot2: null, slot3: null });
-    downloadBtn.disabled = true;
+    if(!roomCode || !myRole) return;
+    await db.ref(`rooms/${roomCode}/players/${myRole}/slots`).set(emptySlots());
     statusText.textContent = stream ? 'Camera ready — say cheese!' : 'Camera off';
   });
 
   downloadBtn.addEventListener('click', async () => {
-    const order = [0,1,2,3].map(i => slotsCache['slot'+i]).filter(Boolean);
-    if(order.length < 4) return;
+    const hostSlots = (playersCache.host || {}).slots || {};
+    const guestSlots = (playersCache.guest || {}).slots || {};
+    const hostOrder = [0,1,2,3].map(i => hostSlots['slot'+i]).filter(Boolean);
+    const guestOrder = [0,1,2,3].map(i => guestSlots['slot'+i]).filter(Boolean);
+    if(hostOrder.length < 4 || guestOrder.length < 4) return;
 
-    const frameW = 480, frameH = 360, pad = 24, gap = 18, capH = 90, topH = 24;
-    const stripW = frameW + pad*2;
+    const frameW = 380, frameH = 285, pad = 20, gap = 14, colGap = 24, capH = 80, topH = 20;
+    const colW = frameW + pad*2;
     const stripH = topH + (frameH*4) + gap*3 + capH;
-    finalCanvas.width = stripW;
+    const totalW = colW*2 + colGap;
+
+    finalCanvas.width = totalW;
     finalCanvas.height = stripH;
     const ctx = finalCanvas.getContext('2d');
-    ctx.fillStyle = '#faf3e6';
-    ctx.fillRect(0,0,stripW,stripH);
-    ctx.fillStyle = 'rgba(0,0,0,.10)';
-    for(let x=10; x<stripW-10; x+=16){
-      ctx.fillRect(x, 6, 8, 6);
-      ctx.fillRect(x, stripH-14, 8, 6);
+    ctx.fillStyle = '#2b0f14';
+    ctx.fillRect(0,0,totalW,stripH);
+
+    async function drawColumn(order, xOffset){
+      ctx.fillStyle = '#faf3e6';
+      ctx.fillRect(xOffset, 0, colW, stripH);
+      let y = topH;
+      for(const slot of order){
+        await new Promise((resolve) => {
+          const img = new Image();
+          img.onload = () => {
+            ctx.strokeStyle = 'rgba(0,0,0,.08)';
+            ctx.strokeRect(xOffset + pad, y, frameW, frameH);
+            ctx.drawImage(img, xOffset + pad, y, frameW, frameH);
+            y += frameH + gap;
+            resolve();
+          };
+          img.src = slot.img;
+        });
+      }
+      return y;
     }
-    let y = topH;
-    for(const slot of order){
-      await new Promise((resolve) => {
-        const img = new Image();
-        img.onload = () => {
-          ctx.strokeStyle = 'rgba(0,0,0,.08)';
-          ctx.strokeRect(pad, y, frameW, frameH);
-          ctx.drawImage(img, pad, y, frameW, frameH);
-          y += frameH + gap;
-          resolve();
-        };
-        img.src = slot.img;
-      });
-    }
-    ctx.fillStyle = '#3a2a1e';
+
+    let lastY = topH;
+    lastY = await drawColumn(hostOrder, 0);
+    await drawColumn(guestOrder, colW + colGap);
+
+    ctx.fillStyle = '#f2cd7c';
     ctx.textAlign = 'center';
-    ctx.font = '40px "Caveat", cursive, sans-serif';
-    ctx.fillText(captionInput.value || '', stripW/2, y + 55);
+    ctx.font = '38px "Caveat", cursive, sans-serif';
+    ctx.fillText(captionInput.value || '', totalW/2, lastY + 50);
 
     const link = document.createElement('a');
-    link.download = 'surprise-photobooth-strip.png';
+    link.download = 'surprise-photobooth-strips.png';
     link.href = finalCanvas.toDataURL('image/png');
     link.click();
   });
